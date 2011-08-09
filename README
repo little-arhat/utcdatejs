@@ -1,0 +1,4 @@
+UTCDate is simple class, which represents datetime in UTC.
+It conforms standard Date api.
+Thanks to Alexander Solovyov (piranha, solovyov.net) for his help
+with this piece of code.
