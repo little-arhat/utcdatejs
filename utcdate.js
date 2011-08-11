@@ -37,10 +37,15 @@ var UTCDate = (function () {
     };
 
     var UTCDate = function(date) {
-        if(date)
-            this.inner = new Date(date);
-        else
+        if(date) {
+            if (date instanceof UTCDate) {
+                this.inner = date.inner;
+            } else {
+                this.inner = new Date(date);
+            }
+        } else {
             this.inner = new Date();
+        }
     }
 
     UTCDate.prototype.getTimezoneOffset = function(){
